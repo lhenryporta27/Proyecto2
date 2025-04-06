@@ -1,21 +1,28 @@
-"""Este módulo contiene funciones de saludo y suma."""
+"""Este módulo contiene funciones básicas de una calculadora."""
 
 
-def saludo(nombre):
-    """Imprime un saludo personalizado."""
-    print("Hola, " + nombre)
+def multiplicar(a, b):
+    """Retorna el producto de dos números."""
+    return a * b
 
 
-def sumar(a, b):
-    """Retorna la suma de dos números."""
-    return a + b
+def dividir(a, b):
+    """Retorna la división de dos números, si el divisor no es cero."""
+    if b == 0:
+        return "Error: división por cero"
+    return a / b
 
 
 def main():
-    """Función principal que ejecuta el saludo y la suma."""
-    saludo("Juan")
-    resultado = sumar(3, 4)
-    print("La suma es:", resultado)
+    """Función principal para ejecutar las operaciones."""
+    num1 = 6
+    num2 = 3
+
+    producto = multiplicar(num1, num2)
+    division = dividir(num1, num2)
+
+    print(f"{num1} * {num2} = {producto}")
+    print(f"{num1} / {num2} = {division}")
 
 
 if __name__ == "__main__":
